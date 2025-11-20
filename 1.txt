@@ -1,0 +1,22 @@
+docker login
+minikube start
+kubectl create deployment nginx --image=nginx
+kubectl scale deployment nginx --replicas=4
+kubectl expose deployment nginx --type=NodePort -port=80 -target-port=80 --name=nginx
+kubectl post-forward service/nginx 8098:80
+minikube dashboard
+kubectl delete deployment nginx
+minikube stop
+
+docker pull jasonrivers/nagios:latest
+docker run --name nagios4 -p 8080:80 -d jasonrivers/nagios
+docker start -ai nagios4
+
+
+nano dockerfile
+FROM nginx:alpine
+COPY index.html /usr/share/nginx/html
+
+
+FROM tomcat:9-jdk11
+COPY target/myapp.war /usr/local/tomcat/webapps/
