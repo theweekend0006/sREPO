@@ -1,0 +1,19 @@
+node {
+    deleteDir()  // Clean workspace before checkout
+    
+    stage('Checkout') {
+        git branch: 'main', url: 'https://github.com/theweekend0006/javaproject.git'
+    }
+    
+    stage('Build') {
+        bat 'mvn clean install'   // Windows command
+    }
+    
+    stage('Test') {
+        bat 'mvn test'
+    }
+    
+    stage('Deploy') {
+        echo 'Deployment Completed'
+    }
+}
