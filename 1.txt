@@ -4,7 +4,7 @@ kubectl create deployment nginx --image=nginx
 kubectl set image deployment/nginx nginx=nginx:latest
 kubectl scale deployment nginx --replicas=4
 kubectl expose deployment nginx --type=NodePort -port=80 -target-port=80 --name=nginx
-kubectl post-forward service/nginx 8098:80
+kubectl port-forward service/nginx 8098:80
 minikube dashboard
 kubectl delete deployment nginx
 minikube stop
@@ -28,5 +28,6 @@ sudo docker run -d -p 80:80 webapp
 
 
 sudo docker run -d -p 9090:8082 webapp
+
 
 
