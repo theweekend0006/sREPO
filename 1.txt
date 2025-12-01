@@ -31,3 +31,13 @@ sudo docker run -d -p 9090:8082 webapp
 
 
 
+<dependency>
+		<groupId>KMIT</groupId>
+			<artifactId>MultimoduleChild1</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+	</dependency>
+
+
+FROM redis:latest
+CMD ["redis-server"]
+
