@@ -1,2 +1,52 @@
-sathwik
-23bd1a663x
+Here’s a small and clear explanation of Use Case Diagram, Class Diagram, and Sequence Diagram – perfect for writing in exams or project reports.
+
+
+---
+1. Use Case Diagram
+➤ What it is?
+A Use Case Diagram shows the functional requirements of a system and how different actors (users) interact with it.
+➤ Key Points
+Represents what the system does, not how.
+Actors are external entities (users, systems).
+Use cases are system functions.
+Helps understand the overall system behavior.
+➤ Example (Hospital Management System)
+Actors: Patient, Doctor, Receptionist, Admin
+Use Cases: Register Patient, Schedule Appointment, Record Consultation, Generate Bill…
+
+2. Class Diagram
+➤ What it is?
+A Class Diagram represents the static structure of a system.
+It shows classes, their attributes, methods, and relationships.
+➤ Key Points
+Used in object-oriented design.
+Shows how data is organized.
+Displays inheritance, association, aggregation, composition.
+Helps in database and code structure planning.
+➤ Example
+Classes: Patient, Doctor, Appointment, Prescription, Invoice
+Relationships:
+One patient can have many appointments.
+One doctor can write many prescriptions.
+
+3. Sequence Diagram
+➤ What it is?
+A Sequence Diagram shows the interaction between objects over time for a specific functionality.
+➤ Key Points
+Represents flow of messages between objects.
+Time moves from top to bottom.
+Helps in understanding how a feature works step-by-step.
+Useful for system process flow.
+➤ Example (Appointment Booking)
+Receptionist → System → Database → Confirm appointment.
+
+🆚 Quick Difference
+Diagram Type	Focuses On	Static or Dynamic	Used For
+Use Case	User interactions	Static	Requirements
+Class	Structure (classes)	Static	System design
+Sequence	Message flow	Dynamic	Process logic
+
+🎯 In One Line Each (for exam):
+Use Case Diagram – Shows what the system does and how users interact with it.
+Class Diagram – Defines the object structure of the system using classes and relationships.
+Sequence Diagram – Describes how objects interact through messages to perform a task over time
